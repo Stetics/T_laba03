@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/inspired/formatter_lib -I/home/inspired/formatter_lib/cd -I/home/inspired/formatter_lib/formatter_ex_lib/.. 
+CXX_INCLUDES = -I/home/inspired/T_lb3 -I/home/inspired/T_lb3/formatter_lib 
 
