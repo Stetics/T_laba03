@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
+  "/home/inspired/T_lb3/formatter_lib/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
@@ -112,9 +113,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "formatter_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/formatter_ex.dir/DependInfo.cmake"
+  "formatter_lib/CMakeFiles/formatter.dir/DependInfo.cmake"
   )

@@ -1,15 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
-
-project(formatter_ex)
-
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CURRENT_SOURCE_DIR /home/inspired/T_lb3)
+cmake_minimum_required(VERSION 3.16)
  
-add_library(formatter_ex STATIC ${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib/formatter_ex.cpp)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/formatter_lib)
-
-target_link_libraries(formatter_ex formatter)
-
+set(CMAKE_CXX_STANDARD 20)
+ 
+project(formatter_ex)
+ 
+add_library(${PROJECT_NAME} STATIC formatter_ex.cpp)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+ 
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib formatter_lib)
+ 
+target_link_libraries(${PROJECT_NAME} formatter)

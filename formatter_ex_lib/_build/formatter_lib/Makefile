@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/inspired/T_lb3/formatter_ex_lib/_build/CMakeFiles /home/inspired/T_lb3/formatter_ex_lib/_build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/inspired/T_lb3/formatter_ex_lib/_build/CMakeFiles /home/inspired/T_lb3/formatter_ex_lib/_build/formatter_lib/CMakeFiles/progress.marks
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f CMakeFiles/Makefile2 formatter_lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/inspired/T_lb3/formatter_ex_lib/_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f CMakeFiles/Makefile2 formatter_lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f CMakeFiles/Makefile2 formatter_lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f CMakeFiles/Makefile2 formatter_lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named formatter_ex
+# Convenience name for target.
+formatter_lib/CMakeFiles/formatter.dir/rule:
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f CMakeFiles/Makefile2 formatter_lib/CMakeFiles/formatter.dir/rule
+.PHONY : formatter_lib/CMakeFiles/formatter.dir/rule
 
-# Build rule for target.
-formatter_ex: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 formatter_ex
-.PHONY : formatter_ex
+# Convenience name for target.
+formatter: formatter_lib/CMakeFiles/formatter.dir/rule
 
-# fast build rule for target.
-formatter_ex/fast:
-	$(MAKE) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/build
-.PHONY : formatter_ex/fast
-
-#=============================================================================
-# Target rules for targets named formatter
-
-# Build rule for target.
-formatter: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 formatter
 .PHONY : formatter
 
 # fast build rule for target.
 formatter/fast:
-	$(MAKE) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/build
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/build
 .PHONY : formatter/fast
 
-formatter_ex.o: formatter_ex.cpp.o
+formatter.o: formatter.cpp.o
 
-.PHONY : formatter_ex.o
+.PHONY : formatter.o
 
 # target to build an object file
-formatter_ex.cpp.o:
-	$(MAKE) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/formatter_ex.cpp.o
-.PHONY : formatter_ex.cpp.o
+formatter.cpp.o:
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/formatter.cpp.o
+.PHONY : formatter.cpp.o
 
-formatter_ex.i: formatter_ex.cpp.i
+formatter.i: formatter.cpp.i
 
-.PHONY : formatter_ex.i
+.PHONY : formatter.i
 
 # target to preprocess a source file
-formatter_ex.cpp.i:
-	$(MAKE) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/formatter_ex.cpp.i
-.PHONY : formatter_ex.cpp.i
+formatter.cpp.i:
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/formatter.cpp.i
+.PHONY : formatter.cpp.i
 
-formatter_ex.s: formatter_ex.cpp.s
+formatter.s: formatter.cpp.s
 
-.PHONY : formatter_ex.s
+.PHONY : formatter.s
 
 # target to generate assembly for a file
-formatter_ex.cpp.s:
-	$(MAKE) -f CMakeFiles/formatter_ex.dir/build.make CMakeFiles/formatter_ex.dir/formatter_ex.cpp.s
-.PHONY : formatter_ex.cpp.s
+formatter.cpp.s:
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(MAKE) -f formatter_lib/CMakeFiles/formatter.dir/build.make formatter_lib/CMakeFiles/formatter.dir/formatter.cpp.s
+.PHONY : formatter.cpp.s
 
 # Help Target
 help:
@@ -171,11 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... formatter_ex"
 	@echo "... formatter"
-	@echo "... formatter_ex.o"
-	@echo "... formatter_ex.i"
-	@echo "... formatter_ex.s"
+	@echo "... formatter.o"
+	@echo "... formatter.i"
+	@echo "... formatter.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/inspired/T_lb3/formatter_ex_lib/_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
